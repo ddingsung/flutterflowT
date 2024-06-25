@@ -109,126 +109,131 @@ class _Onboarding01WidgetState extends State<Onboarding01Widget>
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: const Color(0xFFFF4B3A),
-        body: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Align(
-                  alignment: const AlignmentDirectional(-1.0, 0.0),
-                  child: Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(40.0, 80.0, 0.0, 0.0),
-                    child: Container(
-                      width: 120.0,
-                      height: 120.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                        shape: BoxShape.circle,
-                      ),
-                    ).animateOnPageLoad(
-                        animationsMap['containerOnPageLoadAnimation']!),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                  child: Text(
-                    'Welcome',
-                    style: FlutterFlowTheme.of(context).displaySmall.override(
-                          fontFamily: 'Plus Jakarta Sans',
+        body: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Align(
+                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                    child: Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(40.0, 80.0, 0.0, 0.0),
+                      child: Container(
+                        width: 120.0,
+                        height: 120.0,
+                        decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          fontSize: 65.0,
-                          letterSpacing: 0.0,
-                          fontWeight: FontWeight.w600,
+                          shape: BoxShape.circle,
                         ),
-                  ).animateOnPageLoad(
-                      animationsMap['textOnPageLoadAnimation']!),
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Stack(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.asset(
-                            'assets/images/ToyFaces_Tansparent_BG_29_(1).png',
-                            width: 400.0,
-                            height: 350.0,
-                            fit: BoxFit.contain,
-                            alignment: const Alignment(1.0, 0.0),
+                      ).animateOnPageLoad(
+                          animationsMap['containerOnPageLoadAnimation']!),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                    child: Text(
+                      'Welcome',
+                      style: FlutterFlowTheme.of(context).displaySmall.override(
+                            fontFamily: 'Plus Jakarta Sans',
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            fontSize: 65.0,
+                            letterSpacing: 0.0,
+                            fontWeight: FontWeight.w600,
                           ),
-                        ),
-                        Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
-                          child: ClipRRect(
+                    ).animateOnPageLoad(
+                        animationsMap['textOnPageLoadAnimation']!),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Stack(
+                        children: [
+                          ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
-                              'assets/images/ToyFaces_Tansparent_BG_49.png',
-                              width: 300.0,
+                              'assets/images/ToyFaces_Tansparent_BG_29_(1).png',
+                              width: 400.0,
                               height: 350.0,
                               fit: BoxFit.contain,
-                              alignment: const Alignment(-1.0, 0.0),
+                              alignment: const Alignment(1.0, 0.0),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 44.0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Expanded(
-                    child: Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
-                      child: Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 16.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            context.pushNamed('createID');
-                          },
-                          text: 'Get Started',
-                          options: FFButtonOptions(
-                            width: 314.0,
-                            height: 70.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: Colors.white,
-                            textStyle:
-                                FlutterFlowTheme.of(context).bodyLarge.override(
-                                      fontFamily: 'Plus Jakarta Sans',
-                                      color: const Color(0xFF101213),
-                                      fontSize: 16.0,
-                                      letterSpacing: 0.0,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                            elevation: 0.0,
-                            borderSide: const BorderSide(
-                              color: Color(0xFFE0E3E7),
-                              width: 2.0,
+                          Align(
+                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.asset(
+                                'assets/images/ToyFaces_Tansparent_BG_49.png',
+                                width: 300.0,
+                                height: 350.0,
+                                fit: BoxFit.contain,
+                                alignment: const Alignment(-1.0, 0.0),
+                              ),
                             ),
-                            borderRadius: BorderRadius.circular(12.0),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 44.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Expanded(
+                      child: Align(
+                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        child: Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 8.0, 16.0),
+                          child: FFButtonWidget(
+                            onPressed: () async {
+                              context.pushNamed('createID');
+                            },
+                            text: 'Get Started',
+                            options: FFButtonOptions(
+                              width: 314.0,
+                              height: 70.0,
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: Colors.white,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .override(
+                                    fontFamily: 'Plus Jakarta Sans',
+                                    color: const Color(0xFF101213),
+                                    fontSize: 16.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                              elevation: 0.0,
+                              borderSide: const BorderSide(
+                                color: Color(0xFFE0E3E7),
+                                width: 2.0,
+                              ),
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation']!),
-            ),
-          ],
+                  ],
+                ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation']!),
+              ),
+            ],
+          ),
         ),
       ),
     );
